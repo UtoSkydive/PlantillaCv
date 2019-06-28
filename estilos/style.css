@@ -52,7 +52,7 @@ nav,ol{
     height:5em;
 }
 /*! se da estilos al icono */
-i{
+.menu li>i{
     color:white;
     font-size:1.1em;
     font-family: K2D, sans-serif;
@@ -132,7 +132,7 @@ padding-top:.7em;
     z-index: 10;
 }
 /*! se evita el colapso de margenes entre el header y el h1 */
-.main h1{
+h1{
     margin:0;
     
 }
@@ -184,3 +184,122 @@ color:#ffff;
     z-index: -10;
     /*! esto hace atras el overlay */
 }
+
+
+/*! se inica el proceso de creacion de el about-me */
+
+.about-me{
+    width: 100%;
+    height:50vh;
+    background-color: #fff;
+}
+/* !de esta forma elijo un elemnto h1 en doferentes secciones con propiedades iguales */
+.service h1,
+.about-me  h1{
+    font-size:3em;
+    padding:15px;
+    padding-top:2em;
+
+}
+.about-me p{
+    font-size:1.3em;
+    padding:0 15px;
+}
+.about-me button{
+    min-width: 160px;
+    padding:25px;
+    margin-left:15px;
+    color:black;
+    font-weight: 700;
+    margin-top:20px;
+    background-color:#fff;
+    border:none;
+    cursor: pointer;
+    border: 2px solid #313131;
+    transition: all 1s;
+    transform-origin: 0% 100%;
+    position: relative;
+
+}
+.about-me button:hover{
+    transform:rotate(3deg);
+    background: #C1E5E2;
+}
+/* !de esta forma elijo un elemnto h1 en doferentes secciones con propiedades iguales */
+
+.service span,
+.about-me span{
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    color:#FE4B68;
+}
+/*! se crea el efecto de llando de  boton en el before */
+
+button:before {
+    content:"";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height:100%;
+    /* z-index: -1; */
+    background:rgba(113, 201, 223 , .3);
+    transition: all 1s ease-in-out;
+    /* z-index: 2; */
+    
+  }
+  button:hover:before {
+  width: 100%;
+  /* height: 100%; */
+  /* transform: rotate3d(0, 0, 1, -45deg) */
+  }
+/*! se empieza a crear la seccion de service */
+
+.service{
+    width: 100%;
+    height:120vh;
+    /* background-color:red; */
+}
+  /*! se crea la line en el titulo deservice en el before */
+
+  .service span::after{
+      content:'___';
+      font-weight:100;
+      font-size: 30px;
+  }
+
+  .service h1{
+      margin-left:15px;
+      padding:0;
+  }
+
+  .container-service{
+      margin-top:2%;
+      display:grid;
+      grid-template-rows: repeat(3,1fr);
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 20px;
+      justify-content: center;
+      
+
+  }
+  .service-item{
+      /* background: yellow; */
+      padding:.6em;
+     
+  }
+  .service-item p{
+    line-height: 28px;
+    padding: 2px;
+    color: #777777;
+  }
+  .service-item h2{
+      color: #311d1d;
+  }
+
+  .service-item i{
+      color:#FE6D68;
+      font-size: 3em;
+      padding-bottom: 10px;
+  }

@@ -7,6 +7,7 @@ body{
     margin:0;
     padding:0;
     font-family: K2D, sans-serif;
+    overflow-x: hidden;
 }
 
 nav,ol{
@@ -132,7 +133,7 @@ padding-top:.7em;
     z-index: 10;
 }
 /*! se evita el colapso de margenes entre el header y el h1 */
-h1{
+h1,h2{
     margin:0;
     
 }
@@ -190,10 +191,15 @@ color:#ffff;
 
 .about-me{
     width: 100%;
+    max-width: 1500px;
+    margin:0 auto;
     height:50vh;
     background-color: #fff;
 }
+
 /* !de esta forma elijo un elemnto h1 en doferentes secciones con propiedades iguales */
+.skills h2,
+.contact-me h1,
 .resume h1,
 .service h1,
 .about-me  h1{
@@ -227,6 +233,8 @@ color:#ffff;
     background: #C1E5E2;
 }
 /* !de esta forma elijo un elemnto h1 en doferentes secciones con propiedades iguales */
+.skills span,
+.contact-me span,
 .resume span,
 .service span,
 .about-me span{
@@ -258,8 +266,20 @@ button:before {
 /*! se empieza a crear la seccion de service */
 
 .service{
+    margin-top: 15px;
     width: 100%;
-    height:120vh;
+    max-width: 1500px;
+    /* min-width: 80%; */
+    height: 100%;
+    max-height:195vh;
+    background: #D69210;
+    /* display: flex; */
+    border: 1px solid red;
+    margin:0 auto;
+    
+    
+    /* background: #D69210; */
+    /* padding:1em; */
     /* background-color:red; */
 }
   /*! se crea la line en el titulo deservice en el before */
@@ -273,21 +293,28 @@ button:before {
   .service h1{
       margin-left:15px;
       padding:0;
+
   }
 /*! se realiza una grilla con la informacion de los servicios */
   .container-service{
       margin-top:2%;
       display:grid;
-      grid-template-rows: repeat(3,1fr);
-      grid-template-columns: repeat(2,1fr);
-      grid-gap: 20px;
+      grid-template-rows: repeat(6,1fr);
+      grid-template-columns: repeat(1,96%);
+      grid-gap: 10px;
       justify-content: center;
+      /* align-content: center; */
+      
       
 
   }
   .service-item{
       /* background: yellow; */
       padding:.6em;
+      letter-spacing: .9px;
+      border: 1px solid red;
+      background: #C1E5E2;
+      font-size:.9em;
      
   }
   .service-item p{
@@ -305,24 +332,28 @@ button:before {
       padding-bottom: 10px;
   }
 /*! se inicia la creacion del resume */
-  .resume h1{
+  .resume h1,h2{
     margin-left:15px;
     padding:0;
 }
 /*! tamaño del resume */
 .resume{
     width: 100%;
-    height: 70vh;
+    max-width: 1500px;
+    height: 180vh;
+    margin:0 auto;
+    /* background: #FE4B68; */
     /* background:red; */
 }
 /*! grilla del resume */
 .container-resume{
     display:grid;
-    grid-template-rows: 50px repeat(2,1fr);
-    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: 50px 1fr 1fr 50px 1fr 1fr;
+    grid-template-columns:repeat(1,95%);
     grid-gap:.9em;
-    padding: 40px 55px 40px 40px;  
+    /* padding: 40px 55px 40px 40px;   */
     justify-content: center;  
+    margin-bottom: 0;
     /* align-items:center; */
 }
 /* !estilos de los titulos del resume */
@@ -332,6 +363,11 @@ button:before {
     font-family: 'K2D', sans-serif;
     font-size:28px;
 }
+.box-resume-title{
+    margin:0;
+    padding:0;
+    /* background: #FE4B68; */
+}
 /*! cada box del resume */
 .box-resume{
     border: 1px solid rgba(26,26,26,0.07); 
@@ -340,8 +376,152 @@ button:before {
         padding: 40px 55px 40px 40px;
         margin-top: 35px;
         border-left-color: #fe4b68;
+        /* background: #D69210; */
+        
 }
 .box-resume p{
     color:rgba(75, 71, 71, 0.467);
     line-height: 28px;
+}
+.contact-me{
+    width:100%;
+    max-width: 1500px;
+   
+    height: auto;
+    /* background:red; */
+    margin:0 auto;
+}
+.contac-me h1{
+    margin:0;
+    margin-left:15px;
+    padding: 0;
+}
+
+.container-contact{
+    display:flex;
+    justify-content: space-evenly;
+
+}
+.box-contact{
+    /* background-color:red; */
+    width: 30%;
+    height: auto;
+    text-align: center;
+    margin-top:5em;
+    margin-bottom:4em;
+}
+.box-contact h5{
+    font-size: 1.5em;
+}
+
+.footer{
+    width: 100%;
+    height: 7em;
+    background: #26262D;
+}
+
+.footer p{
+    text-align: center;
+    color:white;
+    line-height: 100px;
+}
+.box-contact i{
+    font-size: 3em;
+    
+    color: #fe4b68;
+}
+    /* !incia el proceso de creacion de skills */
+
+.skills{
+    /* margin-top: 100px; */
+    width:100%;
+    max-width: 1500px;
+    height:100vh;
+    background: #D69210;
+    margin:0 auto;
+}
+.skills h2{
+    margin-left:15px;
+    padding:0;
+}
+.skills p{
+    margin-left:15px;
+    line-height: 1.5em;
+}
+.container-skills{
+    display:flex;
+    justify-content: space-evenly;
+}
+.item-skill{
+    width:40%;
+    height:11em;
+    background-color: #363434;
+}
+.line-skill{
+  height: 25px;
+  min-width:800px ;
+  margin:0 auto 10px;
+  line-height: 25px;
+  font-size: 14px;
+  padding:0 0 10px;
+  position:relative;
+  color:#fff;
+}
+.line-skill:before{
+    content: '';
+    width: 100%;
+    position:absolute;
+    left:0;
+    height: 25px;
+    top:0;
+    z-index:-2;
+    background: #fe4b68;
+}
+
+@media screen and (min-width:700px){
+    body{
+        /* background: #FE4B68; */
+    }
+    /* .service{
+        height: 100vh;
+    } */
+    .container-service{
+        margin-top:2%;
+        display:grid;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(2,600px);
+        grid-gap:10px;
+        justify-content: space-around;
+        align-content: center;
+    }
+    .service-item{
+        /* background: yellow; */
+        padding:.2em;
+        letter-spacing: .9px;
+        border: 1px solid red;
+        background: #C1E5E2;
+        font-size:.9em;
+       
+    }
+    .service{
+        margin-top: 15px;
+        width: 100%;
+        /* min-width: 80%; */
+        height:130vh;
+        background: #D69210;
+        /* display: flex; */
+        border: 1px solid red;
+        
+        
+        /* background: #D69210; */
+        /* padding:1em; */
+        /* background-color:red; */
+    }
+    .service{
+        height:90vh;
+    }
+    .resume{
+        background:red;
+    }
+    
 }
